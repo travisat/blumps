@@ -1,0 +1,29 @@
+BLUMPS
+author: Travis Thompson
+contact: travisat@gmail.com
+
+To Compile:
+
+In blumps directory run:
+make
+
+To Play:
+
+In blumps directory run:
+./blumps
+
+Currently there is no way to install.
+Once I have gotten it to a more mature state I will start to work on installing it.
+
+Libraries I used to Compile:
+
+libsdl1.2 1.2.14
+libglu1-mesa 7.6.1
+libftgl2 2.1.3
+libsdl-image1.2 1.2.10
+
+if on debian/ubuntu
+aptitude install libsdl1.2-dev libglu1-mesa-dev libftgl-dev libsdl-image1.2-dev
+
+Also you may need to do this to get ftgl to link with freetype correctly:
+As root: ln -s /usr/include/freetype2/freetype/ /usr/include/freetype
