@@ -4,6 +4,9 @@ contact: travisat@gmail.com
 
 To Compile:
 
+Download:
+git clone http://github.com/travisat/blumps.git
+
 In blumps directory run:
 make
 
