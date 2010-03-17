@@ -31,7 +31,7 @@ void mainLoop(S_data *game, int level) {
 	while (1) {
 		if (menuLoop(&(game->menu)))
 			return;
-		for (i=level;i < NUMBER_LEVELS;i++){
+		for (i=level;i <= NUMBER_LEVELS;i++){
 			initLevel(&(game->level), i);
 			if (gameLoop(&(game->level))){
 				clearLevel(&(game->level));
@@ -45,10 +45,10 @@ void mainLoop(S_data *game, int level) {
 
 int main(int argc, char *argv[]){
 	S_data game;
-	int level = 0;
+	int level = 1;
 	if (argc > 1) {
 		level = atoi(argv[1]);
-		if (level < 0 || level > NUMBER_LEVELS)
+		if (level < 0 || level >= NUMBER_LEVELS)
 			return 1;
 	}
 

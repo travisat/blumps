@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 extern void setupOpengl();
-extern GLuint loadTexture(char *path);
+extern GLuint loadTexture(const char *path);
 extern void drawScreen(S_level *level);
 extern void drawTexture(S_image *image);
 extern void drawMenu(S_menu *menu);

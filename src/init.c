@@ -20,43 +20,15 @@
 
 #include "blumps.h"
 #include "draw.h"
-#include "initlevels0.h"
+#include "load_level.h"
 
 #define MENU_PATH "images/menu/menu.png"
 #define SELECT_PATH "images/menu/selection.png"
 
 void initLevel(S_level *level, int choice){
-	switch (choice){
-		case 0:
-			initLevel00(level);
-			return;
-		case 1:
-			initLevel01(level);
-			return;
-		case 2:
-			initLevel02(level);
-			return;
-		case 3:
-			initLevel03(level);
-			return;
-		case 4:
-			initLevel04(level);
-			return;
-		case 5:
-			initLevel05(level);
-			return;
-		case 6:
-			initLevel06(level);
-			return;
-		case 7:
-			initLevel07(level);
-			return;
-		case 8:
-			initLevel08(level);
-			return;
-		case 9:
-			initLevel09(level);
-	}
+	char level_select[30];
+	sprintf(level_select,"src/level_set_1/level_%d.cfg",choice);
+	load_level_config(level,level_select);
 	return;
 }
 

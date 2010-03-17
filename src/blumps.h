@@ -69,7 +69,7 @@ typedef struct{
 	int numBlocks;
 	S_image back;
 	S_image paused;
-	char *text;
+	const char *text;
 	S_block *block;
 } S_level;
 

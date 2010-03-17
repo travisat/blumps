@@ -35,10 +35,11 @@ void setupOpengl() {
 	glLoadIdentity();
 }
 
-GLuint loadTexture(char* path){
+GLuint loadTexture(const char* path){
 	GLuint texture;
 	GLenum texture_format;
 	GLint nOfColors;
+	printf("loading %s\n",path);
 	SDL_Surface *surface = IMG_Load(path);
 	if (!surface) {
 		printf("Unable to Load: %s\n", path);
@@ -172,6 +173,7 @@ void drawScreen(S_level* level){
 	glLoadIdentity();
 	drawTexture(&(level->back));
 	drawTexture(&(level->exit));
+	drawTexture(&(level->blumpy.image));
 	for (i=0;i<level->numBlocks;i++){
 		drawTexture(&(level->block[i].image));	
 	}
@@ -179,7 +181,6 @@ void drawScreen(S_level* level){
 	//glBlendFunc(GL_DST_COLOR, GL_ZERO);
 	//drawMask(&(level->blumpy.image));	
 	//glBlendFunc(GL_ONE, GL_ONE);
-	drawTexture(&(level->blumpy.image));
 	//glDisable(GL_BLEND);
 	SDL_GL_SwapBuffers();
 }
