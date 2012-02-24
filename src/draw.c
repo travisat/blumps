@@ -98,25 +98,7 @@ void drawTexture(S_image *image){
 		glVertex3f(image->area.x,image->area.y2,0);
 	glEnd();
 }
-void drawMask(S_image *image){
-	//bind texture to a 2d gl texture so we can work with it
-	glBindTexture( GL_TEXTURE_2D,image->mask );
-	//being gl routines
-	glBegin( GL_QUADS);
-		//top left corner
-		glTexCoord2i(0,0);
-		glVertex3f(image->area.x,image->area.y, 0);
-		//top right corner
-		glTexCoord2i(1,0);
-		glVertex3f(image->area.x2,image->area.y,0);
-		//bottom right corner
-		glTexCoord2i(1,1);
-		glVertex3f(image->area.x2,image->area.y2,0);
-		//bottom left corner
-		glTexCoord2i(0,1);
-		glVertex3f(image->area.x,image->area.y2,0);
-	glEnd();
-}
+
 //drawText: draws text on screen, must call SDL_GL_SwapBuffers() after call to update screen
 //input:string text = text to display
 //input:int x = x position of text
