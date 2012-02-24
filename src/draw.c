@@ -158,10 +158,5 @@ void drawScreen(S_level* level){
 	for (i=0;i<level->numBlocks;i++){
 		drawTexture(&(level->block[i].image));	
 	}
-	//glEnable(GL_BLEND);
-	//glBlendFunc(GL_DST_COLOR, GL_ZERO);
-	//drawMask(&(level->blumpy.image));	
-	//glBlendFunc(GL_ONE, GL_ONE);
-	//glDisable(GL_BLEND);
 	SDL_GL_SwapBuffers();
 }
