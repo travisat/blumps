@@ -29,7 +29,6 @@ void setupOpengl() {
 	glEnable(GL_TEXTURE_2D);
 	glViewport(0,0,WIDTH,HEIGHT);
 	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
 	glOrtho(0.0f, WIDTH, HEIGHT, 0.0f, -1.0f, 1.0f);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
